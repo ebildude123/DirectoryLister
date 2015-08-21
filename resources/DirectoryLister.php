@@ -266,9 +266,9 @@ class DirectoryLister {
 
         // Build the path
         if ($this->_directory == '.') {
-            $path = $this->_appURL;
+            $path = $this->_getUrlPath();
         } else {
-            $path = $this->_appURL . $this->_directory;
+            $path = $this->_getUrlPath() . $this->_directory;
         }
 
         // Return the path
@@ -798,9 +798,17 @@ class DirectoryLister {
         }
 
         // Get the server hostname
-        $host = $_SERVER['HTTP_HOST'];
+        $host = $_SERVER['HTTP_HOST'];        
 
-        // Get the URL path
+        // Build the application URL
+        $appUrl = $protocol . $host . $this->_getUrlPath();
+
+        // Return the URL
+        return $appUrl;
+    }
+	
+	public function _getUrlPath() {
+		// Get the URL path
         $pathParts = pathinfo($_SERVER['PHP_SELF']);
         $path      = $pathParts['dirname'];
 
@@ -813,13 +821,9 @@ class DirectoryLister {
         if (substr($path, -1) != '/') {
             $path = $path . '/';
         }
-
-        // Build the application URL
-        $appUrl = $protocol . $host . $path;
-
-        // Return the URL
-        return $appUrl;
-    }
+		
+		return $path;
+	}
 
 
     /**
