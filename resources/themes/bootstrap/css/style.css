@@ -34,7 +34,7 @@ body.breadcrumb-fixed {
 #page-navbar .navbar-text {
     display: block;
     float: left;
-    font-family: 'Cutive Mono', monospace, serif;
+    font-family: 'Palanquin', monospace, serif;
     max-width: 80%;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -48,13 +48,13 @@ body.breadcrumb-fixed {
 /* ---------------------------------------------------------------------------------------------- */
 
 #directory-list-header {
-    font-family: 'Cutive Mono', monospace, serif;
+    font-family: 'Palanquin', monospace, serif;
     font-weight: bold;
     padding: 10px 15px;
 }
 
 #directory-listing {
-    font-family: 'Cutive Mono', monospace, serif;
+    font-family: 'Palanquin', monospace, serif;
 	
 }
 
@@ -114,7 +114,7 @@ body.breadcrumb-fixed {
 
 #file-info .md5-hash,
 #file-info .sha1-hash {
-    font-family: 'Cutive Mono', monospace, serif;
+    font-family: 'Palanquin', monospace, serif;
 }
 
 
